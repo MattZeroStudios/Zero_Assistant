@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pyttsx3
+import json
 
 chrome_options = Options()
 chrome_options.add_argument("--window-size=1024x768")
@@ -20,11 +21,33 @@ def ask_google(query):
 
 
 question = input("Please ask me a question> ")
-
-thing = str(ask_google(question))
+variable = ask_google(question)
+stringify = str(variable)
 print("The question is: %s \n" % question)
+print(stringify)
+
+data = json.dumps(variable)
+print(data)
+
+
 engine = pyttsx3.init()
 engine.setProperty("voice", 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
 engine.setProperty('rate', 140)
-engine.say(thing)
+
+engine.say(stringify)
 engine.runAndWait()
+
+
+class Query:
+    response = ""
+
+    def __init__(self):
+        pass
+
+    def ask_google(self, query):
+
+        __response = ""
+        self.response = __response
+        return __response
+    
+
