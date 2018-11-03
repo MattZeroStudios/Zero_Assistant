@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settings</class>
+ <widget class="QWidget" name="Settings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>516</width>
+    <height>418</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../assets/Chrome.png</normaloff>../assets/Chrome.png</iconset>
+  </property>
+  <widget class="QTabWidget" name="STab">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>501</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="accessibleName">
+    <string/>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="General">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="accessibleName">
+     <string>General</string>
+    </property>
+    <property name="accessibleDescription">
+     <string>General Settings</string>
+    </property>
+    <attribute name="title">
+     <string>General</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="Voice">
+    <property name="accessibleName">
+     <string>Voice</string>
+    </property>
+    <attribute name="title">
+     <string>Voice</string>
+    </attribute>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
