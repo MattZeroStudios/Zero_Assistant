@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Assitant</class>
- <widget class="QMainWindow" name="Assitant">
+ <class>Gui</class>
+ <widget class="QMainWindow" name="Gui">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>400</width>
     <height>600</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Google Assistant</string>
@@ -17,46 +29,90 @@
    <iconset>
     <normaloff>../assets/Chrome.png</normaloff>../assets/Chrome.png</iconset>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>-1</y>
+      <width>381</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="Layout"/>
+   </widget>
+   <widget class="QPushButton" name="MicButton">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>460</y>
+      <width>85</width>
+      <height>85</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../assets/google_mic.png</normaloff>../assets/google_mic.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>75</width>
+      <height>75</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="MenuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>26</height>
+     <width>400</width>
+     <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuFile">
+   <widget class="QMenu" name="File">
     <property name="title">
-     <string>File</string>
+     <string>file</string>
     </property>
-    <addaction name="actionSettings"/>
-    <addaction name="actionUpdate"/>
+    <addaction name="Settings"/>
+    <addaction name="Exit"/>
    </widget>
-   <widget class="QMenu" name="menuEdit">
+   <widget class="QMenu" name="Help">
     <property name="title">
-     <string>Edit</string>
+     <string>help</string>
     </property>
-    <addaction name="actionVoice"/>
+    <addaction name="Bug"/>
+    <addaction name="Doc"/>
    </widget>
-   <addaction name="menuFile"/>
-   <addaction name="menuEdit"/>
+   <addaction name="File"/>
+   <addaction name="Help"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionSettings">
+  <action name="Settings">
    <property name="text">
     <string>Settings</string>
    </property>
   </action>
-  <action name="actionVoice">
+  <action name="Bug">
    <property name="text">
-    <string>Voice</string>
+    <string>Report a bug</string>
    </property>
   </action>
-  <action name="actionUpdate">
+  <action name="Doc">
    <property name="text">
-    <string>Update</string>
+    <string>Documentation</string>
+   </property>
+  </action>
+  <action name="Exit">
+   <property name="text">
+    <string>exit</string>
    </property>
   </action>
  </widget>

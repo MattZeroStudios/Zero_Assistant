@@ -8,6 +8,9 @@ class Manager:
         self.Ask = query.Query()
         self.Speech = say.Speech()
 
+    def active_listen(self):
+        print("Hey Im listening")
+
 
 class SettingsManager:
 
