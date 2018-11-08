@@ -5,6 +5,6 @@ import sys
 
 # xManager = manager.Manager()
 GoogleAssistant = QApplication(sys.argv)
-Window = loadUi('ui/settings.ui')
+Window = loadUi('ui/main.ui')
 Window.show()
 sys.exit(GoogleAssistant.exec_())
