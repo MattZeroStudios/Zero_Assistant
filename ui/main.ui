@@ -23,49 +23,111 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Google Assistant</string>
+   <string>Zero Assistant</string>
   </property>
   <property name="windowIcon">
    <iconset>
     <normaloff>../assets/Chrome.png</normaloff>../assets/Chrome.png</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="gridLayoutWidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(72, 72, 72);</string>
+   </property>
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>9</x>
-      <y>-1</y>
-      <width>381</width>
+      <x>0</x>
+      <y>0</y>
+      <width>401</width>
       <height>441</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="Layout"/>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(171, 171, 171);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>361</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="Layout"/>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>390</y>
+       <width>401</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(234, 234, 234);</string>
+     </property>
+     <property name="placeholderText">
+      <string>Ask me anything. . . </string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="MicButton">
+   <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>460</y>
-      <width>85</width>
-      <height>85</height>
+      <x>0</x>
+      <y>445</y>
+      <width>401</width>
+      <height>131</height>
      </rect>
     </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../assets/google_mic.png</normaloff>../assets/google_mic.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>75</width>
-      <height>75</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="MicButton">
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../assets/036-microphone-icon.png</normaloff>../assets/036-microphone-icon.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="MenuBar">
@@ -74,7 +136,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="File">
@@ -94,8 +156,11 @@
    <addaction name="File"/>
    <addaction name="Help"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="Settings">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/Chrome.png</normaloff>../assets/Chrome.png</iconset>
+   </property>
    <property name="text">
     <string>Settings</string>
    </property>

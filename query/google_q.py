@@ -21,5 +21,3 @@ class Query:
             350, 230).text
 
         return __response
-
-
